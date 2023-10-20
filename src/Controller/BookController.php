@@ -72,6 +72,6 @@ class BookController extends AbstractController
         $book = $rep->find($id);
         $manager->getManager()->remove($book);
         $manager->getManager()->flush();
-        return $this->redirectToRoute('app_book_all');
+        return $this->redirectToRoute('app_book');
     }
 }
