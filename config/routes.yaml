@@ -1,0 +1,9 @@
+index:
+    path: /teacher
+    controller: App\Controller\teacherController::index
+showTeacher:
+    path: /show/rayen/1
+    controller: App\Controller\TeacherController::showTeacher
+showAuthor:
+    path: /author
+    controller: App\Controller\AuthorController::showAuthor

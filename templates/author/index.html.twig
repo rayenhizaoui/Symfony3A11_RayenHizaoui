@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+	<h1>Liste des auteurs</h1>
+
+	{% if authors is not empty %}
+		<ul>
+			{% for author in authors %}
+				<li>
+					<a href="{{ path('author_details', {'id': author.id}) }}">Détails</a>
+					{{ author.username|upper }}
+				</li>
+			{% endfor %}
+		</ul>
+		<p>Nombre d'auteurs :
+			{{ authors|length }}</p>
+		<p>Nombre total de livres :
+			{{ authors|sum('nb_books') }}</p>
+	{% else %}
+		<p>Aucun auteur trouvé.</p>
+	{% endif %}
+
+
+{% endblock %}
